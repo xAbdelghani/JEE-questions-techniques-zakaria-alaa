@@ -1,7 +1,36 @@
 ## <samp>Les Questions pour un entretien profil JAVA/JEE!</samp>
 
 #### Partie 1: Questions générales
+Section JAVA:
+Java est un langage de programmation orienté objet, portable (Write Once Run Anywhere), compilé en bytecode et exécuté par la JVM.
 
+JDK Vs. JRE Vs. JVM
+JDK is used to develop Java applications, JRE is used to run them, and JVM is the engine that executes bytecode. JDK contains JRE, JRE contains JVM.
+
+JVM:Executes Java bytecode and provides platform independence.
+JRE:Provides the environment to run Java applications.
+JDK:Provides tools to develop and run Java applications.
+
+Relationship
+JDK = JRE + Development Tools
+JRE = JVM + Libraries
+JVM = Executes Bytecode
+
+
+equals() and hashCode() – Interview Summary (Java)
+
+1. What is equals()?
+equals() is used to check logical equality between two objects.
+Default implementation compares memory references (==).
+We override it when we want content-based comparison.
+
+2. What is hashCode()?
+hashCode() returns an int used by hash-based collections (HashMap, HashSet, Hashtable).
+It determines the bucket where the object is stored.
+
+We override hashCode() when overriding equals() to maintain the contract required by hash-based collections, ensuring that equal objects are stored and retrieved correctly.”
+
+Default implementation is usually based on the memory address.
 - 1 . JEE : C'est l’ensemble de spécifications (JPA, JAX-WS, JMS...) pour créer des applications web Java, et c'est le serveur d’application qui fournit les implémentations.
 
 - 2 . La version courante de la specification JEE est : Jakarta EE 9 (le 25 Mai 2021)
@@ -61,7 +90,8 @@
 
 - 18 .	Les types d’injection d’un Bean Spring:
   *  Via le constructeur (recommandé)
-  *  Sous forme attribut avec l’annotation @Autoward
+  *  Sous forme attribut avec l’annotation @Autowired
+  *  Injection via setter
 
 - 19 .	C’est quoi la differnec entre :
   *  @Param : Un parametre Spring Data
