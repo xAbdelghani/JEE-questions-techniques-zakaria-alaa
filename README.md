@@ -385,164 +385,121 @@ En développement, un **craftsman** (ou **software craftsman**) est un développ
   * **Responsabilité** : Engagement à livrer un produit de haute qualité en respectant les attentes des utilisateurs et les contraintes techniques.  
 
 C’est donc un développeur qui ne se contente pas de "faire fonctionner" le code, mais vise à produire un code *exemplaire* et durable.
-Partie 8 : Java Core – Niveau Junior (INDISPENSABLE EN ENTRETIEN)
-1 . Programmation Orientée Objet (POO)
+# Java Interview Preparation – Junior Level Additions
+
+This section complements the existing Java / Spring interview notes and focuses on **core Java fundamentals expected from a Junior Java Developer**.
 
-Encapsulation : cacher l’état interne d’un objet via private + getters/setters.
-
-Héritage : réutilisation de code entre classes (extends).
-
-Polymorphisme : appel de méthodes selon le type réel de l’objet.
-
-Abstraction : utiliser des interfaces ou classes abstraites pour définir des contrats.
-
-2 . Classe abstraite vs Interface
-
-Classe abstraite
-
-Peut contenir des méthodes avec implémentation
-
-Peut avoir des attributs
-
-Une seule classe par héritage
-
-Interface
-
-Définit un contrat
-
-Méthodes abstraites par défaut
-
-Supporte l’héritage multiple
-
-Peut contenir des méthodes default et static
-
-3 . equals() et hashCode()
-
-equals() : comparer le contenu logique des objets
-
-hashCode() : utilisé par les collections (HashMap, HashSet)
-
-Règle importante :
-👉 si equals() est redéfini, hashCode() doit l’être aussi
-
-4 . Collections Java
-
-List : ArrayList, LinkedList
-
-Set : HashSet
-
-Map : HashMap
-
-Différence entre :
-
-ArrayList vs LinkedList
-
-HashMap vs Hashtable
-
-Itération avec for-each et Iterator
-
-5 . Exceptions en Java
-
-Checked exceptions : obligatoires à gérer (IOException)
-
-Unchecked exceptions : héritent de RuntimeException
-
-try / catch / finally
-
-throw vs throws
-
-Créer une exception personnalisée
-
-6 . final, static, this, super
-
-final :
-
-variable constante
-
-méthode non surchargeable
-
-classe non héritée
-
-static : partagé entre toutes les instances
-
-this : référence à l’objet courant
-
-super : référence à la classe parente
-
-7 . Immutabilité
-
-Un objet immutable ne peut pas être modifié après sa création
-
-Exemple : String
-
-Bonnes pratiques :
-
-attributs final
-
-pas de setters
-
-constructeur complet
-
-8 . Java Stream API (bases)
-
-Différence entre :
-
-Stream ≠ Collection
-
-Opérations intermédiaires :
-
-map, filter
-
-Opérations terminales :
-
-forEach, collect
-
-Avantage : code plus lisible et déclaratif
-
-9 . Optional
-
-Utilisé pour éviter les NullPointerException
-
-Méthodes importantes :
-
-isPresent()
-
-orElse()
-
-orElseThrow()
-
-Bonne pratique : éviter Optional.get() sans vérification
-
-10 . Bases du Multithreading (niveau junior)
-
-Différence entre :
-
-Process
-
-Thread
-
-Créer un thread :
-
-extends Thread
-
-implements Runnable
-
-Problèmes courants :
-
-concurrence
-
-incohérence de données (notions)
-
-🔹 Partie 9 : Bonnes pratiques attendues chez un Junior
-
-Code lisible et bien nommé
-
-Méthodes courtes
-
-Respect de SOLID (au moins SRP)
-
-Pas de logique métier dans les contrôleurs
-
-Compréhension des logs et erreurs
-
-Capacité à expliquer son code simplement
+---
+
+## 📌 Java Core – Junior Level (Must-Know)
+
+### 1️⃣ Object-Oriented Programming (OOP)
+- **Encapsulation**: Hiding internal state using `private` fields with getters/setters.
+- **Inheritance**: Reusing behavior using `extends`.
+- **Polymorphism**: Method calls resolved at runtime based on the actual object type.
+- **Abstraction**: Defining contracts using interfaces or abstract classes.
+
+---
+
+### 2️⃣ Abstract Class vs Interface
+**Abstract Class**
+- Can contain implemented methods
+- Can have attributes
+- Single inheritance only
+
+**Interface**
+- Defines a contract
+- Supports multiple inheritance
+- Can contain `default` and `static` methods
+
+---
+
+### 3️⃣ `equals()` and `hashCode()`
+- `equals()` compares logical equality
+- `hashCode()` is used by hash-based collections
+- **Rule**: If `equals()` is overridden, `hashCode()` must also be overridden
+
+---
+
+### 4️⃣ Java Collections Framework
+- **List**: `ArrayList`, `LinkedList`
+- **Set**: `HashSet`
+- **Map**: `HashMap`
+
+Common differences:
+- `ArrayList` vs `LinkedList`
+- `HashMap` vs `Hashtable`
+- Iteration using `for-each` and `Iterator`
+
+---
+
+### 5️⃣ Exception Handling
+- **Checked Exceptions**: Must be handled (`IOException`)
+- **Unchecked Exceptions**: Extend `RuntimeException`
+- Keywords: `try`, `catch`, `finally`
+- `throw` vs `throws`
+- Creating custom exceptions
+
+---
+
+### 6️⃣ Keywords: `final`, `static`, `this`, `super`
+- `final`: constant variables, non-overridable methods, non-inheritable classes
+- `static`: shared across all instances
+- `this`: reference to current object
+- `super`: reference to parent class
+
+---
+
+### 7️⃣ Immutability
+- Immutable objects cannot change state after creation
+- Example: `String`
+- Best practices:
+  - Fields marked as `final`
+  - No setters
+  - All values set via constructor
+
+---
+
+### 8️⃣ Java Stream API (Basics)
+- Stream ≠ Collection
+- **Intermediate operations**: `map`, `filter`
+- **Terminal operations**: `forEach`, `collect`
+- Benefits: readable, declarative code
+
+---
+
+### 9️⃣ Optional
+- Used to avoid `NullPointerException`
+- Common methods:
+  - `isPresent()`
+  - `orElse()`
+  - `orElseThrow()`
+- Avoid using `get()` without checking
+
+---
+
+### 🔟 Multithreading Basics
+- Difference between **Process** and **Thread**
+- Creating threads:
+  - Extending `Thread`
+  - Implementing `Runnable`
+- Basic concurrency concepts (no deep synchronization required)
+
+---
+
+## ✅ Junior Developer Best Practices
+- Write readable and well-named code
+- Keep methods small
+- Respect at least **Single Responsibility Principle (SRP)**
+- Avoid business logic in controllers
+- Understand logs and stack traces
+- Be able to explain your code clearly
+
+---
+
+## 🎯 Interview Expectation (Junior)
+> “I understand Java fundamentals,  
+> I can explain my code,  
+> and I follow clean coding practices.”
+
+---
