@@ -497,9 +497,4 @@ Common differences:
 
 ---
 
-## 🎯 Interview Expectation (Junior)
-> “I understand Java fundamentals,  
-> I can explain my code,  
-> and I follow clean coding practices.”
 
----
